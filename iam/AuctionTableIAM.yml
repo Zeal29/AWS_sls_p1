@@ -1,0 +1,10 @@
+AliAuctionTableIAM:
+    Effect: Allow
+    Action:
+        - dynamodb:PutItem
+        - dynamodb:GetItem
+        - dynamodb:UpdateItem
+        - dynamodb:Scan
+    Resource:
+        - ${self:custom.AliAuctionTable.arn}
+        # - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/AliAuctionsTable
